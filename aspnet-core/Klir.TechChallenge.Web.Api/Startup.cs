@@ -1,14 +1,11 @@
+using Klir.TechChallenge.Infrastructure.Configurator;
+using Klir.TechChallenge.Repository.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace KlirTechChallenge.Web.Api
 {
@@ -26,6 +23,8 @@ namespace KlirTechChallenge.Web.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ServiceConfigurator.ConfigureServices(services);
+            services.AddDbContext<DataContext>(context => context.UseSqlite(Configuration.GetConnectionString("Default")));
             services.AddCors(options =>
             {
                 options.AddPolicy(name: AllowSpecificOrigins,

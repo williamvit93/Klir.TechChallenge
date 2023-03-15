@@ -9,6 +9,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <ProjectReference
+      Include="..\Klir.TechChallenge.Repository\Klir.TechChallenge.Repository.csproj" />
+    <ProjectReference
+      Include="..\Klir.TechChallenge.Infrastructure\Klir.TechChallenge.Infrastructure.csproj" />
   </ItemGroup>
 
 
