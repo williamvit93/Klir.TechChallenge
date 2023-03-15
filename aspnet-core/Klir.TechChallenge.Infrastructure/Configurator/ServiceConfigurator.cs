@@ -1,3 +1,5 @@
+using Klir.TechChallenge.AppService.AppServices;
+using Klir.TechChallenge.AppService.Interfaces;
 using Klir.TechChallenge.Domain.Interfaces;
 using Klir.TechChallenge.Repository.Repositories;
 using Klir.TechChallenge.Service.Services;
@@ -9,6 +11,10 @@ namespace Klir.TechChallenge.Infrastructure.Configurator
     {
         public static void ConfigureServices(IServiceCollection services)
         {
+
+            //AppServices
+            services.AddTransient<IProductAppService, ProductAppService>();
+
             //Services
             services.AddTransient<IProductService, ProductService>();
 

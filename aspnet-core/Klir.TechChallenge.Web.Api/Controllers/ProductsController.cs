@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Klir.TechChallenge.AppService.Interfaces;
+using Klir.TechChallenge.AppService.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Klir.TechChallenge.Web.Api.Controllers
@@ -10,6 +9,16 @@ namespace Klir.TechChallenge.Web.Api.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        
+        private IProductAppService _productAppService;
+        public ProductsController(IProductAppService productAppService)
+        {
+            _productAppService = productAppService;
+        }
+
+        [HttpGet]
+        public IEnumerable<ProductViewModel> Get()
+        {
+            return _productAppService.GetAll();
+        }
     }
 }

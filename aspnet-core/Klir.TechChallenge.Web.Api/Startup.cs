@@ -1,3 +1,5 @@
+using AutoMapper;
+using Klir.TechChallenge.AppService.Config;
 using Klir.TechChallenge.Infrastructure.Configurator;
 using Klir.TechChallenge.Repository.Context;
 using Microsoft.AspNetCore.Builder;
@@ -24,6 +26,7 @@ namespace KlirTechChallenge.Web.Api
         public void ConfigureServices(IServiceCollection services)
         {
             ServiceConfigurator.ConfigureServices(services);
+            services.AddAutoMapper(typeof(Startup));
             services.AddDbContext<DataContext>(context => context.UseSqlite(Configuration.GetConnectionString("Default")));
             services.AddCors(options =>
             {
@@ -35,6 +38,13 @@ namespace KlirTechChallenge.Web.Api
             });
 
             services.AddControllers();
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapperConfiguration());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
