@@ -1,3 +1,19 @@
-<p>
-  products works!
-</p>
+<p *ngIf="!productsRows || !productsRows.length"><em>Loading...</em></p>
+<div class="container text-center" id="productsList">
+  <div *ngFor="let row of productsRows" class="row mb-4">
+    <div *ngFor="let product of row" class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+
+          <p class="h3">
+            {{ product.price | currency : 'EUR' : 'symbol' : '1.2-2' }}
+          </p>
+          <button class="btn btn-primary btn-sm">
+            <i> Add to Cart</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
