@@ -9,7 +9,7 @@ namespace Klir.TechChallenge.AppService.AppServices
 {
     public class ProductAppService : IProductAppService
     {
-        private IProductService _productService;
+        private readonly IProductService _productService;
         private readonly IMapper _mapper;
 
         public ProductAppService(IProductService productService, IMapper mapper)

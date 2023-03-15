@@ -9,7 +9,7 @@ namespace Klir.TechChallenge.Web.Api.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        private IProductAppService _productAppService;
+        private readonly IProductAppService _productAppService;
         public ProductsController(IProductAppService productAppService)
         {
             _productAppService = productAppService;

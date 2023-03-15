@@ -1,9 +1,10 @@
 using System;
+using Klir.TechChallenge.Domain.Interfaces;
 using Klir.TechChallenge.Domain.Models;
 
 namespace Klir.TechChallenge.Service.Services.Strategy
 {
-    public class PromotionStrategyBuyQuantityEarnQuantity : PromotionStrategy
+    public class PromotionStrategyBuyQuantityEarnQuantity : PromotionStrategy, IPromotionStrategyBuyQuantityEarnQuantity
     {
         public override ProductPromotion Calculate(Product product, Promotion promotion, int quantityProducts)
         {

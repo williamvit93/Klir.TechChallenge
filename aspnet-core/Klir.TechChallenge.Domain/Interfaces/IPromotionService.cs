@@ -8,5 +8,6 @@ namespace Klir.TechChallenge.Domain.Interfaces
         int Add(Promotion promotion);
         Promotion GetById(int id);
         IEnumerable<Promotion> GetAll();
+        ProductPromotion GetProductPromotion(Product product, int quantityProducts);
     }
 }
