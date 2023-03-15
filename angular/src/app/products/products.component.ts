@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { createMatrix } from '../helpers/matrixHelper';
 import { Product } from '../models/Product';
 import { ProductsService } from '../services/products.service';
+import { ShoppingCartService } from '../services/shopping-cart.service';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +10,10 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  constructor(private productsService: ProductsService) {}
+  constructor(
+    private productsService: ProductsService,
+    private shoppingCartService: ShoppingCartService
+  ) {}
 
   private _productsRows: Product[][] = [];
 
@@ -27,5 +31,9 @@ export class ProductsComponent implements OnInit {
       },
       error: (error) => console.log(error),
     });
+  }
+
+  public addProductToCart(product: Product) {
+    this.shoppingCartService.addCartProduct(product);
   }
 }
