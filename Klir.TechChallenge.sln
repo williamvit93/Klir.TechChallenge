@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klir.TechChallenge.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klir.TechChallenge.Infrastructure", "aspnet-core\Klir.TechChallenge.Infrastructure\Klir.TechChallenge.Infrastructure.csproj", "{D9A329E8-58F6-438A-A933-186830DC03E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klir.TechChallenge.Service", "aspnet-core\Klir.TechChallenge.Service\Klir.TechChallenge.Service.csproj", "{302B3AA1-D8F8-470E-91F3-3CB1CB2A0DAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{D9A329E8-58F6-438A-A933-186830DC03E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A329E8-58F6-438A-A933-186830DC03E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9A329E8-58F6-438A-A933-186830DC03E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302B3AA1-D8F8-470E-91F3-3CB1CB2A0DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302B3AA1-D8F8-470E-91F3-3CB1CB2A0DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302B3AA1-D8F8-470E-91F3-3CB1CB2A0DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302B3AA1-D8F8-470E-91F3-3CB1CB2A0DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{E0C363BA-4D64-488A-885D-F1723E6B69C0} = {C2E1925B-0109-4CE3-BC11-AEB92912CC64}
 		{CAE185FB-E96E-43F3-B49A-F37C8C592A59} = {C2E1925B-0109-4CE3-BC11-AEB92912CC64}
 		{D9A329E8-58F6-438A-A933-186830DC03E5} = {C2E1925B-0109-4CE3-BC11-AEB92912CC64}
+		{302B3AA1-D8F8-470E-91F3-3CB1CB2A0DAB} = {C2E1925B-0109-4CE3-BC11-AEB92912CC64}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B22C9792-C11E-4F83-91D8-5ACFDDC0FC5E}
