@@ -14,7 +14,12 @@ namespace Klir.TechChallenge.AppService.Config
         {
             //Domain to ViewModel
             CreateMap<Product, ProductViewModel>();
-            CreateMap<Promotion, PromotionViewModel>();
+            CreateMap<Promotion, PromotionViewModel>()
+                .ForMember(promotionViewModel
+                => promotionViewModel.PromotionDescription, opt
+                    => opt.MapFrom(promotion
+                        => promotion.GetPromotionDescription()));
+                        
             CreateMap<PromotionType, PromotionTypeViewModel>();
 
             //ViewModel to Domain

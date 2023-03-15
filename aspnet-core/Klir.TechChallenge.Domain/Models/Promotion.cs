@@ -13,5 +13,23 @@ namespace Klir.TechChallenge.Domain.Models
         public int PromotionTypeId { get; set; }
         public virtual PromotionType PromotionType { get; set; }
         public virtual IEnumerable<Product> Products { get; set; }
+
+        public string GetPromotionDescription()
+        {
+            var promotionDescription = PromotionType.Description.Replace("{buy_quantity}", BuyQuantity.ToString());
+
+            if (PromotionTypeId == (int)Enums.PromotionTypes.BuyQuantityAndEarnQuantity)
+                promotionDescription = promotionDescription
+                .Replace("{free_quantity}", Result.ToString());
+
+            if (PromotionTypeId == (int)Enums.PromotionTypes.BuyQuantityByPrice)
+            {
+                promotionDescription = promotionDescription
+                .Replace("{price}", Result.ToString())
+                .Replace("{currency}", Currency).Replace("{currency}", Currency);
+            }
+
+            return promotionDescription;
+        }
     }
 }

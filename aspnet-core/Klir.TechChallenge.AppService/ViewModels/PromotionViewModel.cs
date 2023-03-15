@@ -10,6 +10,7 @@ namespace Klir.TechChallenge.AppService.ViewModels
         public int Result { get; set; }
         public string Currency { get; set; }
         public int PromotionTypeId { get; set; }
+        public string PromotionDescription { get; set; }
         public virtual ProductViewModel Product { get; set; }
     }
 }
