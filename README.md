@@ -10,3 +10,4 @@
 - Then `npm start`
 - Go to `\KlirTechChallenge` and run `dotnet restore`
 - Go to `\KlirTechChallenge\aspnet-core\Klir.TechChallenge.Web.Api` and run `dotnet watch run`
+---
