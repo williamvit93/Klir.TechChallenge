@@ -3,7 +3,7 @@
 ## Compatibility
 - #### Node v14.18.3
 - #### Npm v6.14.1
-- #### .NetCore v3.1.426
+- #### .NetCore v5.xxx
 
 ## How to Run
 - Go to `\KlirTechChallenge\angular`
