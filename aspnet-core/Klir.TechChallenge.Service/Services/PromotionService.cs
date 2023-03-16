@@ -1,11 +1,7 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Klir.TechChallenge.Domain.Enums;
 using Klir.TechChallenge.Domain.Interfaces;
 using Klir.TechChallenge.Domain.Models;
-using Klir.TechChallenge.Service.Services.Strategy;
 
 namespace Klir.TechChallenge.Service.Services
 {

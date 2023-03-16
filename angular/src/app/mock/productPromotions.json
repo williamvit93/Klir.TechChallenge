@@ -1,0 +1,32 @@
+[
+  {
+    "isPromotionApplied": true,
+    "product": {
+      "id": 1,
+      "name": "Product A",
+      "price": 4,
+      "promotion": {
+        "id": 1,
+        "buyQuantity": 3,
+        "currency": "Euro",
+        "productId": null,
+        "promotionDescription": "3 for 10 Euro",
+        "promotionTypeId": 2,
+        "result": 10
+      }
+    },
+    "promotion": {
+      "id": 1,
+      "buyQuantity": 3,
+      "currency": "Euro",
+      "productId": null,
+      "promotionDescription": "3 for 10 Euro",
+      "promotionTypeId": 2,
+      "result": 10
+    },
+    "totalDiscount": 4,
+    "totalPrice": 24,
+    "totalQuantity": 7,
+    "totalQuantityFree": 0
+  }
+]

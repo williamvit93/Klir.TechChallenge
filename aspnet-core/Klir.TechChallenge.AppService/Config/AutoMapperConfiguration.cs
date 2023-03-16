@@ -19,13 +19,16 @@ namespace Klir.TechChallenge.AppService.Config
                 => promotionViewModel.PromotionDescription, opt
                     => opt.MapFrom(promotion
                         => promotion.GetPromotionDescription()));
-                        
+
             CreateMap<PromotionType, PromotionTypeViewModel>();
+            CreateMap<ProductPromotion, ProductPromotionViewModel>();
 
             //ViewModel to Domain
             CreateMap<ProductViewModel, Product>();
             CreateMap<PromotionViewModel, Promotion>();
             CreateMap<PromotionTypeViewModel, PromotionType>();
+            CreateMap<ProductPromotionViewModel, ProductPromotion>();
+
 
         }
     }

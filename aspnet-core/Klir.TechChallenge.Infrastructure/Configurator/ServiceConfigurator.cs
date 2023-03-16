@@ -13,17 +13,21 @@ namespace Klir.TechChallenge.Infrastructure.Configurator
         public static void ConfigureServices(IServiceCollection services)
         {
 
-            //AppServices
-            services.AddTransient<IProductAppService, ProductAppService>();
+            //Services
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IPromotionService, PromotionService>();
             services.AddTransient<IPromotionStrategyBuyQuantityEarnQuantity, PromotionStrategyBuyQuantityEarnQuantity>();
             services.AddTransient<IPromotionStrategyQuantityForPrice, PromotionStrategyQuantityForPrice>();
             services.AddTransient<IPromotionStrategyNoPromotion, PromotionStrategyNoPromotion>();
 
-            //Services
-            services.AddTransient<IProductService, ProductService>();
-
             //Repositories
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IPromotionRepository, PromotionRepository>();
+
+            //AppServices
+            services.AddTransient<IProductAppService, ProductAppService>();
+            services.AddTransient<ICheckoutAppService, CheckoutAppService>();
+
         }
     }
 }

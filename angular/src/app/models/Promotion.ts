@@ -4,5 +4,6 @@ export interface Promotion {
   result: number;
   currency: string;
   productId: number;
+  promotionDescription: string;
   promotionTypeId: number;
 }
